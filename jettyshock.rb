@@ -29,16 +29,6 @@ class Metasploit3 < Msf::Auxiliary
       'Privileged'     => false,
       'Platform'       => ['unix'],
       'Arch'           => ARCH_CMD,
-      'Payload'        =>
-        {
-          'DisableNops' => true,
-          'Space'       => 0x31337,
-          'Compat'      =>
-            {
-              'PayloadType' => 'cmd',
-              'RequiredCmd' => 'generic perl telnet',
-            }
-        },
       'Targets'        =>
         [
           ['Automatic', {}]
